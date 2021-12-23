@@ -1,0 +1,30 @@
+{
+  "init": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "dev",
+    "host": "localhost"
+  },
+  "dev": {
+    "driver": "mysql",
+    "user": "root",
+    "password": "dev",
+    "host": "localhost",
+    "database": "nodedb",
+    "multipleStatements": true
+  },
+  "prod": {
+    "driver": "mysql",
+    "user": { "ENV": "PRODUCTION_USERNAME" },
+    "password": { "ENV": "PRODUCTION_PASSWORD" },
+    "host": "db",
+    "database": "nodedb",
+    "multipleStatements": true
+  },
+  "init-prod": {
+    "driver": "mysql",
+    "user": { "ENV": "PRODUCTION_USERNAME" },
+    "password": { "ENV": "PRODUCTION_PASSWORD" },
+    "host": "db"
+  }
+}
